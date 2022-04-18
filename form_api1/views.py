@@ -1,11 +1,3 @@
-from asyncore import read
-from email import header
-import imp
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.template import loader
-
-import requests
 from form_api1.models import Promotionfmodel
 from form_api1.serialize import Promotionfserialize
 from rest_framework.response import Response
@@ -20,7 +12,7 @@ def savepromf(request):
         if saveserialze.is_valid():
             saveserialze.save()
             return Response(saveserialze.data, status=status.HTTP_201_CREATED)
-            return Response(saveserialze.data,status=status.HTTP_400_BAD_REQUEST)
+        return Response(saveserialze.data,status=status.HTTP_400_BAD_REQUEST)
         
 # def insertpromf(request):
 #     if request.method=="POST":
