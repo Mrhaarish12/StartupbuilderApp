@@ -1,5 +1,4 @@
-from form_api1.models import Promotionfmodel
-from form_api1.serialize import Promotionfserialize
+from promotion.serialize import Promotionfserialize
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
